@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Tv Shows</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="margin: 10% 0 0 30%">
+    <h1>All Shows</h1>
+    <table>
+        <tr>
+            <th style="padding-right: 20px;">ID</th>
+            <th style="padding-right: 100px;">Title</th>
+            <th style="padding-right: 100px;">Network</th>
+            <th style="padding-right: 70px;">Release Date</th>
+            <th style="padding-right: 0px;">Actions</th>
+        </tr>
+        <!-- Looping through the context variable -->
+        {% for s in shows %}
+        <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.title}}</td>
+            <td>{{s.network}}</td>
+            <td>{{s.release_date}}</td>
+            <td>
+                <!--  -->
+                <a href="/shows/{{s.id}}">Shows</a>
+                <a href="/shows/{{s.id}}/updatePage">Edit</a>
+                <a href="/shows/{{s.id}}/delete">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/shows/new">Add a new show</a>
+
+</body>
+
+</html>

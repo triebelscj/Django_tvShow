@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Tv Shows</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body style="margin: 25px;">
+    <h1>Tv Show Details</h1>
+
+
+    <h3>Title: {{show.title}}</h3>
+    <h3>Network: {{show.network}}</h3>
+    <h3>Release Date: {{show.release_date}}</h3>
+    <h3>Description: {{show.description}}</h3>
+    <h3>Last updated: {{show.updated_at}}</h3>
+
+    <a href="/shows/{{show.id}}/updatePage">Edit |</a>
+    <a href="/shows/{{show.id}}/delete">Delete |</a>
+    <a href="/">All Shows</a>
+</body>
+
+</html>
