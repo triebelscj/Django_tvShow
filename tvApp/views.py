@@ -63,7 +63,7 @@ def create_show(request):
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/shows/create')
+            return redirect('/shows/new')
         else:
             Show.objects.create(
                 title=request.POST['title'],
@@ -74,7 +74,7 @@ def create_show(request):
             )
         print(request.POST)
         # return redirect(f'/shows/{new_show.id}')
-    return redirect('/shows/create')
+    return redirect('/shows')
 
 
 # This actually changes stuff when I UPDATE the EDIT page

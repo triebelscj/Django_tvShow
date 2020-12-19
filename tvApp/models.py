@@ -9,7 +9,7 @@ class ShowManager(models.Manager):
     # network at least 3 char
     def validateShow(self, postData):
         errors = {}
-        print("///////// ", postData)
+
         if len(postData["title"]) < 1:
             errors["title"] = "Title is required."
         if len(postData["title"]) < 2:
